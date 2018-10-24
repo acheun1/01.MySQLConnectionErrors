@@ -1,0 +1,138 @@
+#Assignment: MySQL connection errors
+#2018 10 07
+#Cheung Anthony
+
+
+(py3Env) C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals>python dumby.py
+Traceback (most recent call last):
+  File "dumby.py", line 8, in <module>
+    from myqlconnection import connectToMySQL
+ModuleNotFoundError: No module named 'myqlconnection'
+
+(py3Env) C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals>python dumby.py
+Traceback (most recent call last):
+  File "dumby.py", line 8, in <module>
+    from mysqlconnection import connectToMySQL
+ModuleNotFoundError: No module named 'mysqlconnection'
+
+(py3Env) C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals>python dumby.py
+Traceback (most recent call last):
+  File "dumby.py", line 8, in <module>
+    from mysqlconnection import connectToMySQL
+ModuleNotFoundError: No module named 'mysqlconnection'
+
+(py3Env) C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals>python dumby.py
+Traceback (most recent call last):
+  File "dumby.py", line 20, in <module>
+    from mysqlconnection import connectToMySQL
+ModuleNotFoundError: No module named 'mysqlconnection'
+
+(py3Env) C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals>python dumby.py
+Traceback (most recent call last):
+  File "dumby.py", line 11, in <module>
+    mysql = connectToMySQL('mydb')
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\mysqlconnection.py", line 45, in connectToMySQL
+    return MySQLConnection(db)
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\mysqlconnection.py", line 11, in __init__
+    autocommit = True)
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\connections.py", line 327, in __init__
+    self.connect()
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\connections.py", line 598, in connect
+    self._request_authentication()
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\connections.py", line 862, in _request_authentication
+    auth_packet = self._process_auth(plugin_name, auth_packet)
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\connections.py", line 933, in _process_auth
+    pkt = self._read_packet()
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\protocol.py", line 220,
+in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1049, "Unknown database 'mydb'")
+
+(py3Env) C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals>clear
+'clear' is not recognized as an internal or external command,
+operable program or batch file.
+
+(py3Env) C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals>python dumby.py
+Traceback (most recent call last):
+  File "dumby.py", line 26, in <module>
+    mysql = connectToMySQL('mydb')
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\mysqlconnection.py", line 45, in connectToMySQL
+    return MySQLConnection(db)
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\mysqlconnection.py", line 11, in __init__
+    autocommit = True)
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\connections.py", line 327, in __init__
+    self.connect()
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\connections.py", line 598, in connect
+    self._request_authentication()
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\connections.py", line 862, in _request_authentication
+    auth_packet = self._process_auth(plugin_name, auth_packet)
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\connections.py", line 933, in _process_auth
+    pkt = self._read_packet()
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\protocol.py", line 220,
+in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1049, "Unknown database 'mydb'")
+
+(py3Env) C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals>python dumby.py
+Traceback (most recent call last):
+  File "dumby.py", line 26, in <module>
+    mysql = connectToMySQL('mydb')
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\mysqlconnection.py", line 45, in connectToMySQL
+    return MySQLConnection(db)
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\mysqlconnection.py", line 11, in __init__
+    autocommit = True)
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\connections.py", line 327, in __init__
+    self.connect()
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\connections.py", line 598, in connect
+    self._request_authentication()
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\connections.py", line 862, in _request_authentication
+    auth_packet = self._process_auth(plugin_name, auth_packet)
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\connections.py", line 933, in _process_auth
+    pkt = self._read_packet()
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\protocol.py", line 220,
+in check_error
+    err.raise_mysql_exception(self._data)
+  File "C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals\py3Env\lib\site-packages\pymysql\err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1049, "Unknown database 'mydb'")
+
+(py3Env) C:\Users\jarvis\Documents\CodingDojo\python_stack\flask_fundamentals>python dumby.py
+Running Query: SELECT * FROM users;
+all the users [{'id': 1, 'first_name': 'Amy', 'last_name': 'Giver', 'created_at': datetime.datetime(2018, 5, 4, 13, 13, 45)}, {'id': 2, 'first_name': 'Eli', 'last_name': 'Byers', 'created_at': datetime.datetime(2018, 5, 4, 13, 13, 55)}, {'id': 3, 'first_name': 'Big',
+'last_name': 'Bird', 'created_at': datetime.datetime(2018, 5, 4, 13, 14, 24)}, {'id': 4, 'first_name': 'Kermit', 'last_name': 'The Frog', 'created_at': datetime.datetime(2018, 5, 4, 13, 14, 33)}, {'id': 5, 'first_name': 'Marky', 'last_name': 'Mark', 'created_at': datetime.datetime(2018, 5, 4, 13, 14, 51)}, {'id': 6, 'first_name': 'Some', 'last_name': 'Person', 'created_at': datetime.datetime(2018, 9, 29, 9, 44, 31)}]
+ * Serving Flask app "dumby" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Restarting with stat
+Running Query: SELECT * FROM users;
+all the users [{'id': 1, 'first_name': 'Amy', 'last_name': 'Giver', 'created_at': datetime.datetime(2018, 5, 4, 13, 13, 45)}, {'id': 2, 'first_name': 'Eli', 'last_name': 'Byers', 'created_at': datetime.datetime(2018, 5, 4, 13, 13, 55)}, {'id': 3, 'first_name': 'Big',
+'last_name': 'Bird', 'created_at': datetime.datetime(2018, 5, 4, 13, 14, 24)}, {'id': 4, 'first_name': 'Kermit', 'last_name': 'The Frog', 'created_at': datetime.datetime(2018, 5, 4, 13, 14, 33)}, {'id': 5, 'first_name': 'Marky', 'last_name': 'Mark', 'created_at': datetime.datetime(2018, 5, 4, 13, 14, 51)}, {'id': 6, 'first_name': 'Some', 'last_name': 'Person', 'created_at': datetime.datetime(2018, 9, 29, 9, 44, 31)}]
+ * Debugger is active!
+ * Debugger PIN: 132-801-829
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Detected change in 'C:\\Users\\jarvis\\Documents\\CodingDojo\\python_stack\\flask_fundamentals\\dumby.py', reloading
+ * Restarting with stat
+Running Query: SELECT * FROM users;
+all the users [{'id': 1, 'first_name': 'Amy', 'last_name': 'Giver', 'created_at': datetime.datetime(2018, 5, 4, 13, 13, 45)}, {'id': 2, 'first_name': 'Eli', 'last_name': 'Byers', 'created_at': datetime.datetime(2018, 5, 4, 13, 13, 55)}, {'id': 3, 'first_name': 'Big',
+'last_name': 'Bird', 'created_at': datetime.datetime(2018, 5, 4, 13, 14, 24)}, {'id': 4, 'first_name': 'Kermit', 'last_name': 'The Frog', 'created_at': datetime.datetime(2018, 5, 4, 13, 14, 33)}, {'id': 5, 'first_name': 'Marky', 'last_name': 'Mark', 'created_at': datetime.datetime(2018, 5, 4, 13, 14, 51)}, {'id': 6, 'first_name': 'Some', 'last_name': 'Person', 'created_at': datetime.datetime(2018, 9, 29, 9, 44, 31)}]
+ * Debugger is active!
+ * Debugger PIN: 132-801-829
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
